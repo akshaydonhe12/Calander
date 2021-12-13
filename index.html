@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+
+    <!--- STYLE.CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--- BOOTSTRAP.CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--- EVO-CALANDER.MIN.CSS -->
+    <link rel="stylesheet" href="css/evo-calendar.min.css">
+
+    <!--- EVO-CALANDER-THEME.CSS -->
+    <link rel="stylesheet" href="css/evo-calendar.orange-coral.css">
+
+    <!--- GOOGLE-FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero">
+        <div id="calendar"></div>
+    </div>
+
+
+
+    <!--- jquery-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    <!--- EVO-CALANDER.JS-->
+    <script src="evo-calendar.min.js"></script>
+    <script src="evo-calendar.js"></script>
+
+    <!---- Initialize Evo-calander----->
+    <script>
+        $(document).ready(function() {
+            $('#calendar').evoCalendar({
+                theme: 'Orange Coral',
+                
+                calendarEvents: [
+      {
+        id: 'event1', // Event's ID (required)
+        name: "Republic Day", // Event name (required)
+        date: "January/26/2022", // Event date (required)
+        description:"The Constitution was adopted by the Indian Constituent Assembly on 26 November 1949 and came into effect on 26 January 1950 with a democratic government system, completing the country's transition towards becoming an independent republic.",
+        type: "holiday", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        id: 'event2', // Event's ID (required)
+        name: "Makar Sankranti", // Event name (required)
+        date: "January/14/2022", // Event date (required)
+        description:"The harvest festival is both a religious as well as seasonal observance, and is dedicated to Lord Surya, the Sun God. Makar Sankranti is the first major festival to be celebrated in India.",
+        type: "festival", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+      {
+        id: 'event3', // Event's ID (required)
+        name: "Valentine Day", // Event name (required)
+        date: "February/14/2022", // Event date (required)
+        description:"The harvest festival is both a religious as well as seasonal observance, and is dedicated to Lord Surya, the Sun God. Makar Sankranti is the first major festival to be celebrated in India.",
+        type: "festival", // Event type (required)
+        everyYear: true // Same event every year (optional)
+      },
+    ]
+ })
+   
+})
+    </script>
+</body>
+
+</html>
